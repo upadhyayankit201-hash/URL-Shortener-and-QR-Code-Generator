@@ -1,0 +1,12 @@
+{
+  "name": "url-qr-generator",
+  "version": "1.0.0",
+  "description": "Simple URL shortener and QR code generator (beginner-friendly)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

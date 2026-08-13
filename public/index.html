@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>URL Shortener & QR Generator</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <h1>URL Shortener & QR Generator</h1>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="card">
+        <h2>URL Shortener</h2>
+        <input id="longUrl" placeholder="Enter your long URL" />
+        <div class="row">
+          <button id="shortenBtn" class="btn">Shorten URL</button>
+        </div>
+        <div id="result" class="result hidden">
+          <p>Your shortened URL:</p>
+          <div class="short-area">
+            <a id="shortLink" href="#" target="_blank"></a>
+            <div>
+              <button id="copyBtn" class="btn small">Copy</button>
+              <button id="openBtn" class="btn small">Open</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>QR Code Generator</h2>
+        <input id="qrUrl" placeholder="Enter URL" />
+        <div class="row">
+          <button id="genQrBtn" class="btn">Generate QR</button>
+          <button id="clearQrBtn" class="btn ghost">Clear</button>
+        </div>
+        <div id="qrArea" class="qr-area hidden">
+          <canvas id="qrcanvas"></canvas>
+          <div class="row">
+            <button id="downloadQrBtn" class="btn">Download QR</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
